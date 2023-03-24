@@ -49,6 +49,7 @@ header nav ul .logo img {
 }
 header nav ul .logo p {
   font-weight: 300;
+  font-size: 0.9rem;
 }
 header nav ul .menu {
   display: flex;
@@ -64,6 +65,7 @@ header nav ul .menu li a {
   padding-bottom: 0.1rem;
   position: relative;
   font-weight: 300;
+  font-size: 0.9rem;
 }
 header nav ul .menu li a::after {
   content: "";
@@ -83,7 +85,7 @@ header nav ul .badge {
   font-family: "poppins", sans-serif;
   position: absolute;
   right: -0.2rem;
-  top: 0.1rem;
+  top: -0.1rem;
   font-size: 0.3rem;
   width: 0.5rem;
   height: 0.5rem;
@@ -236,7 +238,7 @@ main .container-products-filter .products .products-filter .products-filter-cate
   border-radius: 2rem;
   background-color: #fff;
   font-family: "poppins", sans-serif;
-  font-size: 0.8rem;
+  font-size: 0.65rem;
 }
 main .container-products-filter .products .products-filter .products-filter-category .products-category:hover {
   background-color: #ffa500;
@@ -414,6 +416,7 @@ footer .container-footer .footer-newsletter form button:hover {
     padding-bottom: 0.1rem;
   }
   header nav ul .badge {
+    top: -0.1rem;
     right: -0.3rem;
     width: 0.7rem;
     height: 0.7rem;
