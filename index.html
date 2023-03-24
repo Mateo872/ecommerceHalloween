@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Creepster"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css"
+    />
+    <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <title>Ecommerce</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <a href="./index.html" class="logo">
+            <img src="./img/logo.png" alt="Logo" />
+            <p>Halloween</p>
+          </a>
+          <div class="menu">
+            <li><a href="./index.html" class="link active">Inicio</a></li>
+            <li><a href="#products" class="link">Productos</a></li>
+            <li class="link-cart">
+              <a href="#" class="link"><i class="bi bi-cart"></i></a>
+              <div class="badge"><span>0</span></div>
+            </li>
+          </div>
+        </ul>
+      </nav>
+      <div class="cart-container none">
+        <h6>Cart</h6>
+        <div class="cart-products">
+          <div class="cart-product"></div>
+          <h4 class="empty-total">Total <span class="price-total">$0</span></h4>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="container-banner">
+        <article class="banner">
+          <div class="banner-image">
+            <div class="banner-text">
+              <h2>¡Truco o trato!</h2>
+              <p>Se acerca el terror...</p>
+              <a href="#halloweenDay"><i class="bi bi-arrow-down"></i></a>
+            </div>
+          </div>
+        </article>
+      </section>
+      <section class="container-products-filter" id="products">
+        <article class="products">
+          <h3>Productos</h3>
+          <div class="products-filter">
+            <div class="products-input">
+              <input type="search" placeholder="Buscar..." data-input-search />
+            </div>
+            <div class="products-filter-category">
+              <p class="products-category featured category-active">Destacados</p>
+              <p class="products-category best-sellers">Más vendidos</p>
+              <p class="products-category less-sold">Menos vendidos</p>
+            </div>
+          </div>
+          <div class="container-products"></div>
+        </article>
+      </section>
+      <section class="container-counter" id="halloweenDay">
+        <article class="counter-content">
+          <div class="content">
+            <h2>Prepárate!</h2>
+            <h2 class="subtitle">Halloween se acerca...</h2>
+            <div class="counter">
+              <span class="counter-date counter-day">
+                <p class="counter-number" data-days></p>
+              </span>
+              <span class="counter-date counter-hours">
+                <p class="counter-number" data-hours></p>
+              </span>
+              <span class="counter-date counter-minutes">
+                <p class="counter-number" data-minutes></p>
+              </span>
+              <span class="counter-date counter-seconds">
+                <p class="counter-number" data-seconds></p>
+              </span>
+            </div>
+          </div>
+          <div class="content-image">
+            <img
+              src="./img/womens-cool-witch-costume-removebg-preview 1.png"
+              alt="Bruja"
+            />
+          </div>
+        </article>
+      </section>
+    </main>
+    <footer>
+      <section class="container-footer">
+        <article class="footer-info">
+          <ul>
+            <h5>INFORMACIÓN</h5>
+            <li><a href="#">Acerca de nosotros</a></li>
+            <li><a href="#">Información delivery</a></li>
+            <li><a href="#">Politicas de privacidad</a></li>
+            <li><a href="#">Términos y condiciones</a></li>
+            <li><a href="#">Contáctanos</a></li>
+          </ul>
+        </article>
+        <article class="footer-account">
+          <ul>
+            <h5>MI CUENTA</h5>
+            <li><a href="#">Historial de ordenes</a></li>
+            <li><a href="#">Lista de deseos</a></li>
+            <li><a href="#">Boletín</a></li>
+            <li><a href="#">Reembolsos</a></li>
+          </ul>
+        </article>
+        <article class="footer-newsletter">
+          <h5>BOLETÍN INFORMATIVO</h5>
+          <p>
+            Suscríbete a nuestros boletines ahora y mantente al día con nuevas
+            colecciones y ofertas exclusivas.
+          </p>
+          <form action="">
+            <input type="search" placeholder="Ingresa el correo..." />
+            <button>Suscribirse</button>
+          </form>
+        </article>
+      </section>
+    </footer>
+    <script src="./js/script.js"></script>
+  </body>
+</html>

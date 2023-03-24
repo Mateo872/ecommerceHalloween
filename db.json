@@ -1,0 +1,88 @@
+{
+    "products":[
+        {   
+            "id": 1,
+            "image": "./img/sombreroBruja.png",
+            "name": "Sombrero de bruja",
+            "description":"¡Haz que tu Halloween sea aún más espeluznante con nuestro sombrero de alta calidad!",
+            "price": 11.99
+        },
+        {   
+            "id": 2,
+            "image": "./img/cabezaEsqueleto.png",
+            "name": "Cabeza de esqueleto",
+            "description":"Agrega un toque escalofriante a tu decoración de Halloween con nuestra cabeza de esqueleto.",
+            "price": 8.99
+        },
+        {   
+            "id": 3,
+            "image": "./img/mascaraMurcielago.png",
+            "name": "Máscara de murciélago",
+            "description":"¡Luce tenebrosamente impresionante en Halloween con nuestra máscara de murciélago!",
+            "price": 9.99
+        },
+        {   
+            "id": 4,
+            "image": "./img/espantapajaros.png",
+            "name": "Espantapájaros",
+            "description":"Agrega un toque aterrador a tu decoración de Halloween  con nuestro espantapájaros. ¡Obtén el tuyo ahora!",
+            "price": 17.99
+        },
+        {   
+            "id": 5,
+            "image": "./img/calabaza.png",
+            "name": "Calabaza aterradora",
+            "description":"Agrega un toque de Halloween a tu hogar con nuestra calabaza decorativa. Diseño detallado y realista.",
+            "price": 14.99
+        },
+        {   
+            "id": 6,
+            "image": "./img/dulces.png",
+            "name": "Dulces espeluznantes",
+            "description":"¡Llenos de sabor y diversión para la noche de brujas! Son la mejor opción para endulzar tu fiesta.",
+            "price": 4.99
+        },
+        {   
+            "id": 7,
+            "image": "./img/disfraz.png",
+            "name": "Disfraz de terror",
+            "description":"Prepárate para una noche de miedo con nuestros disfraces de Halloween! Conviértete en el centro de atención.",
+            "price": 19.99
+        },
+        {   
+            "id": 8,
+            "image": "./img/bolaCristal.png",
+            "name": "Bola de cristal",
+            "description":"Con su diseño espeluznante y detalles meticulosos, esta bola de cristal causará sensación en tu fiesta.",
+            "price": 5.99
+        },
+        {   
+            "id":9,
+            "image": "./img/mascaraFranklin.png",
+            "name": "Máscara de zombie",
+            "description":"Esta máscara de látex presenta la cara de un muerto viviente con una piel desgarrada y ojos vidriosos.",
+            "price": 7.99
+        },
+        {   
+            "id": 10,
+            "image": "./img/vampiro.png",
+            "name": "Máscara de vampiro",
+            "description":" Esta máscara de látex presenta una cara de vampiro con colmillos afilados.",
+            "price": 3.99
+        },
+        {   
+            "id": 11,
+            "image": "./img/mascara.png",
+            "name": "Máscara de demonio",
+            "description":"Presenta una cara roja y retorcida con cuernos puntiagudos y una expresión malvada.",
+            "price": 4.99
+        },
+        {   
+            "id": 12,
+            "image": "./img/cuchillo.png",
+            "name": "Cuchillo sangriento",
+            "description":"Este cuchillo es el complemento perfecto para cualquier disfraz de asesino o psicópata en Halloween.",
+            "price": 8.99
+        }
+    ]
+}
