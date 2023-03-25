@@ -248,6 +248,8 @@ totalOfProducts = dataProducts.reduce(
 
 badgeText.textContent = totalOfProducts;
 
+total();
+
 function btnAddProduct(e) {
   cartProductContainer.innerHTML = "";
 
@@ -297,6 +299,8 @@ linkCart.addEventListener("click", (e) => {
 });
 
 function cartProducts() {
+  total();
+
   dataProducts.sort((a, b) => {
     if (a.quantity < b.quantity) {
       return 1;
@@ -329,7 +333,6 @@ function cartProducts() {
       `;
 
     showBtnDelete();
-    total();
   });
 }
 
@@ -339,14 +342,29 @@ function showBtnDelete() {
   btnDelete.forEach((btn) => btn.addEventListener("click", btnTrash));
 }
 
+function btnTrash(e) {
+  dataProducts = dataProducts.filter((id) => id.id !== e.target.id);
+  e.target.parentElement.remove();
+
+  totalOfProducts = dataProducts.reduce(
+    (total, product) => total + product.quantity,
+    0
+  );
+
+  badgeText.textContent = totalOfProducts;
+
+  total();
+  saveLocal();
+}
+
 function total() {
+  let priceTotal = document.querySelector(".price-total");
   if (dataProducts.length === 0) {
     emptyTotal.classList.add("none");
+    cartProductContainer.appendChild(emptyCart);
   } else {
     emptyTotal.classList.remove("none");
   }
-
-  let priceTotal = document.querySelector(".price-total");
 
   priceTotal.innerHTML = `$${dataProducts
     .reduce(
@@ -358,25 +376,6 @@ function total() {
       0
     )
     .toFixed(2)}`;
-}
-
-function btnTrash(e) {
-  dataProducts = dataProducts.filter((id) => id.id !== e.target.id);
-  e.target.parentElement.remove();
-
-  if (dataProducts.length === 0) {
-    cartProductContainer.appendChild(emptyCart);
-  }
-
-  totalOfProducts = dataProducts.reduce(
-    (total, product) => total + product.quantity,
-    0
-  );
-
-  badgeText.textContent = totalOfProducts;
-
-  total();
-  saveLocal();
 }
 
 function saveLocal() {
