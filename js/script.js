@@ -232,13 +232,21 @@ function btnShow() {
   btnAdd.forEach((btn) => btn.addEventListener("click", btnAddProduct));
 }
 
-let dataProducts = [];
+let dataProducts = JSON.parse(localStorage.getItem("cart")) || [];
 
-const badge = document.querySelector(".badge");
-
-const badgeText = badge.querySelector("span");
+cartProducts();
 
 let totalOfProducts = 0;
+
+const badge = document.querySelector(".badge");
+const badgeText = badge.querySelector("span");
+
+totalOfProducts = dataProducts.reduce(
+  (total, product) => total + product.quantity,
+  0
+);
+
+badgeText.textContent = totalOfProducts;
 
 function btnAddProduct(e) {
   cartProductContainer.innerHTML = "";
@@ -275,6 +283,7 @@ function btnAddProduct(e) {
   badgeText.innerText = totalOfProducts;
 
   cartProducts();
+  saveLocal();
 }
 
 const linkCart = document.querySelector(".link-cart");
@@ -297,6 +306,8 @@ function cartProducts() {
     }
     return 0;
   });
+
+  cartProductContainer.innerHTML = "";
 
   dataProducts.forEach((product) => {
     const { id, image, name, price, quantity } = product;
@@ -350,7 +361,7 @@ function total() {
 }
 
 function btnTrash(e) {
-  dataProducts = dataProducts.filter((id) => id.id != e.target.id);
+  dataProducts = dataProducts.filter((id) => id.id !== e.target.id);
   e.target.parentElement.remove();
 
   if (dataProducts.length === 0) {
@@ -365,6 +376,11 @@ function btnTrash(e) {
   badgeText.textContent = totalOfProducts;
 
   total();
+  saveLocal();
+}
+
+function saveLocal() {
+  localStorage.setItem("cart", JSON.stringify(dataProducts));
 }
 
 const countdown = setInterval(() => {
