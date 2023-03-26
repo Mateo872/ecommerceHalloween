@@ -60,7 +60,12 @@
           <h3>Productos</h3>
           <div class="products-filter">
             <div class="products-input">
-              <input type="search" placeholder="Buscar..." data-input-search />
+              <input
+                type="email"
+                placeholder="Buscar..."
+                data-input-search
+                required
+              />
             </div>
             <div class="products-filter-category">
               <p class="products-category featured category-active">Destacados</p>
@@ -128,12 +133,14 @@
             colecciones y ofertas exclusivas.
           </p>
           <form action="">
-            <input type="search" placeholder="Ingresa el correo..." />
-            <button>Suscribirse</button>
+            <input type="search" placeholder="Ingresa el correo..." data-email />
+            <p class="message-error none">Email válido</p>
+            <button class="suscribe">Suscribirse</button>
           </form>
         </article>
       </section>
     </footer>
     <script src="./js/script.js"></script>
+    <script src="./js/validation.js"></script>
   </body>
 </html>
